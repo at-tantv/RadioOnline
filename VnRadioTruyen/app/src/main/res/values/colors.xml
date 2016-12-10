@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color.bg_item_play">#20243e</color>
+    <color name="color.view_line">#30000000</color>
+    <color name="color.menu_play_music">#202e40</color>
+    <color name="color.white">#FFFFFF</color>
+    <color name="orange">#ff3d00</color>
+    <color name="color.view.line_menu">#50FFFFFF</color>
+    <color name="color.view.line_controll">#FFFFFF</color>
+    <color name="bgmenu_items">#262721</color>
+    <color name="bgmenu_type">#3f542b</color>
+    <color name="bgmenu_items_play">#677252</color>
+    <color name="bgmenu_disk">#3f542b</color>
+</resources>

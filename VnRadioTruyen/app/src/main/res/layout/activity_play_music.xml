@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tlTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rl.playmusic.height"
+        android:background="@color/bgmenu_disk">
+
+        <ImageView
+            android:id="@+id/imgPlayMusicBack"
+            android:layout_width="@dimen/rl.playmusic.height"
+            android:layout_height="@dimen/rl.playmusic.height"
+            android:layout_centerVertical="true"
+            android:padding="20dp"
+            android:src="@drawable/icon_btnback" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgPlayMusicBack"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSongName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:lines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:text="Tiếu ngạo giang hồ"
+                android:textColor="@color/color.white"
+                android:textSize="@dimen/textview.playmusic.title_song"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rlStatusSlide"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/bgmenu_disk"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <View
+                android:id="@+id/viewPageChange1"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="#30000000" />
+
+            <View
+                android:id="@+id/viewPageChange2"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="#6b0b56" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerFragmentController"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlStatusSlide"
+        android:layout_below="@+id/tlTopLayout"
+        android:background="@color/bgmenu_disk" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bgmenu_disk">
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_above="@+id/llPlayMusicController"
+            android:background="#30FFFFFF" />
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/llPlayMusicController"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imgPreviousPlayMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="7dp"
+                android:src="@anim/button_previous_disk" />
+
+            <ImageView
+                android:id="@+id/imgPlayMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@anim/button_play_disk" />
+
+            <ImageView
+                android:id="@+id/imgNextPlayMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="7dp"
+                android:src="@anim/button_next_disk" />
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlControllNextMusic"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            >
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:16"
+                android:textColor="@color/color.white"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:layout_alignParentBottom="true"
+                android:id="@+id/seekBarPlayMusic"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:thumb="@color/nocolor"
+
+                />
+
+            <TextView
+                android:layout_marginRight="15dp"
+                android:id="@+id/tvTimeSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="04:56"
+                android:textColor="@color/color.white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

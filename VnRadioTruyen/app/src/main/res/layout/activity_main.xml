@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/myDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgmenu">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/relative.main.height"
+                android:background="@color/bgmenu">
+
+                <ImageView
+                    android:id="@+id/imgMainMenu"
+                    android:layout_width="@dimen/imageview.main.width_menu"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/nocolor"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_menu_white_24dp" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/textview.main.title_menu"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textview.main.title_menu" />
+
+                <ImageView
+                    android:id="@+id/imgMainSetting"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/nocolor"
+                    android:padding="13dp"
+                    android:src="@mipmap/btn_setting" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/flListPlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlMenu"
+                android:background="#FFFFFF" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/bgmenu">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.DrawerLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/llMenuController"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@anim/rectangle_item_mini_player" />
+
+        <TextView
+            android:id="@+id/tvTitleSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/textview.main.name_song"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imgMainReplay"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/ic_replay_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imgMainPrevious"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/ic_skip_previous_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imgMainPlayMusic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_play_arrow_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imgMainNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/ic_skip_next_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imgMainShuffle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/ic_shuffle_white_24dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMainTimeSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:text="01:33"
+            android:textColor="@color/color.white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvMainRemainingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="00:48"
+            android:textColor="@color/color.white"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/seeBarMainMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/tvMainTimeSong"
+            android:layout_toRightOf="@+id/tvMainRemainingTime" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llPlayListDetail"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/bgmenu"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgIconTitleBig"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_music_top1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#70000000">
+
+            <TextView
+                android:id="@+id/tvNamePlaylist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="Ma thoi den - tap 1"
+                android:textColor="@color/color.white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCountTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNamePlaylist"
+                android:layout_marginLeft="10dp"
+                android:text="20 Tracks"
+                android:textColor="#70FFFFFF"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlDetailPL"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/llPlayListDetail"
+        android:background="@color/color.bg_item_play">
+
+
+        <ImageView
+            android:id="@+id/imgShareFacebook"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="70dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ico_btn_sharefb" />
+
+        <ImageView
+            android:id="@+id/imgFeedBack"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ico_btn_feedback" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#40FFFFFF" />
+    </RelativeLayout>
+</LinearLayout>

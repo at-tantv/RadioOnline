@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlItemMenu"
+        android:layout_width="match_parent"
+        android:background="@color/bgmenu_items"
+
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/icon_menu_1"
+            />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_toRightOf="@+id/imgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Nghe nhac online"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textview.item.txtname"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#70000000"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

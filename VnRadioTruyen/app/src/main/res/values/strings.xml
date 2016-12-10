@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VnRadio Online</string>
+    <string name="app_id">1635693660053276</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="textview.main.title_menu">Vn Radio Truyện</string>
+    <string name="textview.main.name_song">Tieu ngao giang ho</string>
+    <string name="textview.main.name_singer">Kim Dung</string>
+    <string name="empty_text">Tieu ngao giang ho</string>
+    <string name="textview.playmusic.list_song">List Songs</string>
+</resources>
